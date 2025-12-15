@@ -1,0 +1,52 @@
+---
+const { pathname } = Astro.url;
+---
+
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="/" class="header__logo">Jeff Douglas</a>
+      
+      <nav class="header__nav">
+        <a href="/" class:list={["header__nav-link", { active: pathname === "/" }]}>Home</a>
+        <a href="/about/" class:list={["header__nav-link", { active: pathname === "/about/" }]}>About</a>
+        <a href="/fancy-alpaca-ranch/" class:list={["header__nav-link", { active: pathname === "/fancy-alpaca-ranch/" }]}>Fancy Alpaca Ranch</a>
+        <a href="https://ginormous-rv-palooza.github.io" class="header__nav-link" target="_blank" rel="noopener">RV Palooza</a>
+      </nav>
+      
+      <div class="header__actions">
+        <button id="search-toggle" class="header__btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </svg>
+        </button>
+        
+        <button id="theme-toggle" class="header__btn theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+          </svg>
+        </button>
+        
+        <button class="header__btn menu-toggle" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"></line>
+            <line x1="4" x2="20" y1="6" y2="6"></line>
+            <line x1="4" x2="20" y1="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

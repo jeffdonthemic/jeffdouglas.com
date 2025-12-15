@@ -1,0 +1,55 @@
+---
+title:  Google Go or Node.js for web development? Which is better?
+description: This post has been sloshing around in my brain for a couple of months now and its finally time to let it spill out all over the floor. Last July I started digging into Google Go  for my Topcoder Cribs with Docker blog post , and found it to be surprising straight forward, powerful and easy to work with. Subsequently, the more Node.js that I wrote, the more I realized how much I liked Go and missed its ease of use. Periodically Ive asked myself, is Go better for web development than Node.js and
+pubDate: "2015-01-28 12:35:33 +0300"
+heroImage: '/images/slugs/google-go-or-nodejs-for-web-development-which-is-better.jpg'
+tags:   ["node.js", "google go"]
+slug: "2015/01/28/google-go-or-nodejs-for-web-development-which-is-better"
+---
+This post has been sloshing around in my brain for a couple of months now and its finally time to let it spill out all over the floor. Last July I started digging into <a href="https://golang.org/">Google Go</a> for my <a href="http://www.topcoder.com/blog/building-go-web-apps/">Topcoder Cribs with Docker blog post</a>, and found it to be surprising straight forward, powerful and easy to work with. Subsequently, the more Node.js that I wrote, the more I realized how much I liked Go and missed its ease of use. Periodically Ive asked myself, is Go <em>better</em> for web development than Node.js and JavaScript? Unfortunately, Ive yet to respond to myself.
+
+<strong>JavaScript is Dead. Long Live JavaScript.</strong>
+
+Dont get me wrong, I love JavaScript and MEAN is my go-to stack. Roughly 75% of my work is done with JavaScript on the server or client somewhere and Id estimate that 6070% of my <a href="https://github.com/jeffdonthemic">personal repos</a> are in some flavor of JavaScript. But like most full-stack developers, Im overwhelmed by seemingly daily releases of new frameworks, testing tools, templating libraries and more. I know the <a href="http://blog.codinghorror.com/the-principle-of-least-power/">goal is to JavaScript all the things</a> but I think we need to stop or take a smoke break from the madness. <a href="http://www.breck-mckye.com/blog/2014/12/the-state-of-javascript-in-2015/">The State of JavaScript in 2015</a> provides a great example of the chaos:
+
+<blockquote>
+As little as twelve months ago is seemed a fait accompli that the modern web would be dominated by Backbone.js (maybe using Marionette), with Grunt as a task runner, Require.js and Handlebars-based templating. Yet six months later, these technologies had all apparently been replaced, if the blogosphere was anything to go by  now, it was all about Angular, Gulp and Browserify. And then suddenly this stack seems questionable too.
+
+</blockquote>
+Were all adults here so let face reality. Its no secret that <a href="http://whydoesitsuck.com/why-does-javascript-suck/">JavaScript has tons of problems</a>. People either code around the warts or run away from JavaScript as quickly as possible. <a href="http://www.reddit.com/r/golang/comments/1ye3z6/go_vs_nodejs_for_servers/">Reddit has an awesome thread</a> on using Go versus Node.js for servers. Its a must read for the comments alone.
+
+{<1>}<img src="http://www.flutterby.net/2014-05-28NodeJSPresentation/diagrams/JavaScriptGoodPartsVsDefinitiveGuide.jpg" alt="" >
+
+No one language is perfect or else everyone would be using it and Id be writing about my favorite cat videos or pudding recipes instead. However, there are things that make Node.js a joy to develop with including modules, npm (a dream compared to Bundler and dependency hell with Ruby), the event loop, a vibrant developer community and the fact that I can bootstrap a new Express app in a matter of minutes if not seconds.
+
+But in contrast, there are a number of usability issues that make me want to chew glass sometimes instead of use Node.js. I frequently have issues with profiling, debugging, error handling, testing and the general asynchronous nature of Node.js itself. <a href="https://twitter.com/tjholowaychuk">TJ Holowaychuk</a>, arguably the most prolific Node.js developer, <a href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b">said goodbye to Node.js and hello to Go</a> last summer for a number of these same reasons.
+
+However, these issue arent new and some of the core committers of Node.js are dedicated to solving them. Last December a number of the core committers to Node.js finally became fed up with Joyents pace of innovation and release schedule and decided to create a fork of Node.js called <a href="https://iojs.org/">io.js</a>. Hopefully everyone involved can get together, site around the campfire, resolve differences and hug it out.
+
+<img src="https://www.topcoder.com/wp-content/uploads/2015/01/campfire.jpg" alt="" >
+
+<strong>We  Node.js</strong>
+
+At <a href="http://www.appirio.com">Appirio</a> and <a href="http://www.topcoder.com">topcoder</a> we write a lot of JavaScript and Node.js for our clients and I dont see this trend slowing anytime in the near future. However, weve been hearing whispers from large corporate accounts about using Go, especially when it comes to building APIs and other backend service running on distributed, cloud platforms. The times they may be a changing!
+
+<strong>Why I Fancy Go</strong>
+
+Go is no holy grail. However, for our customers that build and run distributed apps in the cloud, it might be a pretty good fit. <a href="https://medium.com/code-adventures/farewell-node-js-4ba9e7f3e52b">TJ outlines</a> some compelling points:
+
+<blockquote>
+Im not saying Go is the absolute best language out there and that you must use it, but its very mature and robust for its age (roughly the same age as Node), refactoring with types is pleasant and simple, the tooling Go provides for profiling and debugging is great, and the community has very strong conventions regarding documentation, formatting, benchmarking, and API design.
+
+</blockquote>
+Go feels scripty and is very easy to grok with roughly 40 pages of docs. Plus, theres something that gives me a warm, happy feeling inside when I compile my code into a binary. Maybe it harkens back to my days writing Java where everything was statically typed and I could be fairly confident that things would just work and not have to worry about runtime typos.
+
+Apparently we are not the only ones that are interested in Go as the <a href="http://redmonk.com/sogrady/2015/01/14/language-rankings-1-15/">RedMonk Programming Language Rankings for January</a> shows a steady rise in Gos popularity, moving from #21 to #17 displacing Visual Basic, Clojure and Groovy since the last ranking in June.
+
+Adrian Cockcroft of Battery Ventures (and Netflix of course) stated at <a href="http://thenewstack.io/dockercon-europe-adrian-cockcroft-on-the-state-of-microservices/">DockerCon last month</a>:
+
+<blockquote>
+In the role I have now working in a VC firm about 3/4 of the new stuff that we see is written in Go. Its really started to take over as the language that new things are written in. 
+
+</blockquote>
+One last thing Go may be poised for meteoric rise as <a href="https://blog.golang.org/go1.4">version 1.4</a> recently added support for Android development. <em>If</em> Go becomes fully supported, you may see a huge increase in adoption similar to what happened to Swifts popularity when it was unveiled. I suspect mobile developers would much rather develop Android apps with Go than with Java. But, then again, what do I know.
+
+

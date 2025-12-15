@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, pubDate, heroImage } = post.data;
+const customSlug = post.data.slug;
+
+// Build the URL - use custom slug from frontmatter if provided, otherwise use the collection slug
+const postUrl = customSlug ? `/${customSlug}` : `/${post.slug}`;
+---
+
+<article class="article">
+  <div class="article__head">
+    {heroImage && (
+      <a class="article__image" href={postUrl}>
+        <time class="article__date" datetime={pubDate.toISOString()}>
+          <FormattedDate date={pubDate} />
+        </time>
+        <img src={heroImage} alt={title} loading="lazy" />
+      </a>
+    )}
+  </div>
+  
+  <div class="article__content">
+    <h2 class="article__title">
+      <a href={postUrl}>{title}</a>
+    </h2>
+    
+    {description && (
+      <p class="article__excerpt">{description.slice(0, 75)}...</p>
+    )}
+  </div>
+</article>

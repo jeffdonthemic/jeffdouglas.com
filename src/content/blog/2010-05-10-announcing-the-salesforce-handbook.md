@@ -1,0 +1,14 @@
+---
+title:  Announcing the Salesforce Handbook
+description: Wes Nolte and I have just announced that we will be writing a new book aimed at business owners, analysts and developers, that comprehensively documents Salesforce and Force.com. The Salesforce Handbook A newcomers guide to building applications on Salesforce.com and the Force.com Platform  Hand-in-hand with the book well be publishing content from the book on a  WordPress site . Here you can expect to find excerpts from the book, but also content that supplements the book e.g. areas thatll s
+pubDate: "2010-05-10 16:47:49 +0300"
+heroImage: '/images/slugs/announcing-the-salesforce-handbook.jpg'
+tags:   ["salesforce"]
+slug: "2010/05/10/announcing-the-salesforce-handbook"
+---
+<p style="clear: both"><a href="http://th3silverlining.com/" target="_blank">Wes Nolte</a> and I have just announced that we will be <a href="http://salesforcehandbook.wordpress.com/" target="_blank">writing a new book</a> aimed at business owners, analysts and developers, that comprehensively documents Salesforce and Force.com.
+<p style="clear: both"><strong>The Salesforce Handbook</strong><br /><em>A newcomers guide to building applications on Salesforce.com and the Force.com Platform</em>
+<p style="clear: both">Hand-in-hand with the book well be publishing content from the book on a <a href="http://salesforcehandbook.wordpress.com/" target="_blank">WordPress site</a>. Here you can expect to find excerpts from the book, but also content that supplements the book e.g. areas thatll serve as best-practice hubs with links to official documentation, blog posts that rock the party, and even superb discussion forum threads.
+<p style="clear: both">Checkout the book's site at: <a href="http://salesforcehandbook.wordpress.com/" target="_blank">http://salesforcehandbook.wordpress.com</a>
+<p style="clear: both">
+<br class="final-break" style="clear: both" />

@@ -1,0 +1,69 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import Pagination from '../components/Pagination.astro';
+
+// Site config
+const hero = {
+  title: "Hey, I'm Jeff Douglas",
+  description: "I like to make things with 1's and 0's and occasionally wood and metal. I've been a developer since... as long as I can remember. For the past couple of years I've been a Product Manager at Salesforce for Hyperforce developer tooling. I'm currently the Product Manager for Agentforce Vibes. My first 8 years were spent building Trailhead as one of the three initial members.",
+  image: '/images/jeffdouglas-2.jpg'
+};
+
+// Get all posts sorted by date
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
+// Pagination settings
+const postsPerPage = 12;
+const totalPages = Math.ceil(allPosts.length / postsPerPage);
+const posts = allPosts.slice(0, postsPerPage);
+
+// Get pinned posts
+const pinnedPosts = allPosts.filter(post => post.data.pinned);
+---
+
+<BaseLayout 
+  title="Jeff Douglas | Developer, Product Manager & Community Builder" 
+  description="Personal blog about Salesforce development, cloud computing, APIs, and building developer communities. Former Trailhead team member and Product Manager at Salesforce."
+>
+  <Hero 
+    title={hero.title}
+    description={hero.description}
+    image={hero.image}
+  />
+  
+  <!-- Main Articles -->
+  <section class="articles">
+    <div class="container">
+      <div class="articles__grid animate">
+        {posts.map((post) => (
+          <ArticleCard post={post} />
+        ))}
+      </div>
+      
+      <Pagination 
+        currentPage={1} 
+        totalPages={totalPages}
+        baseUrl=""
+      />
+      
+      <!-- Pinned Posts -->
+      {pinnedPosts.length > 0 && (
+        <div class="pinned-posts">
+          <div class="section__head">
+            <h2 class="section__title">Pinned Posts</h2>
+          </div>
+          <div class="articles__grid animate">
+            {pinnedPosts.map((post) => (
+              <ArticleCard post={post} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

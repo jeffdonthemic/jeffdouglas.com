@@ -1,0 +1,74 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from './BaseLayout.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import SocialShare from '../components/SocialShare.astro';
+
+type Props = CollectionEntry<'blog'>['data'] & {
+  readingTime?: string;
+};
+
+const { title, description, pubDate, heroImage, tags, readingTime } = Astro.props;
+const currentUrl = Astro.url.href;
+
+// Site config
+const author = {
+  name: 'Jeff Douglas',
+  avatar: '/images/jeffdouglas-1.png'
+};
+---
+
+<BaseLayout 
+  title={`${title} | Jeff Douglas`} 
+  description={description} 
+  image={heroImage}
+  publishedDate={pubDate}
+  type="article"
+>
+  <article class="post">
+    <div class="post-head">
+      <div class="container">
+        <div class="post-head__inner">
+          {heroImage && (
+            <div class="post__image">
+              <img src={heroImage} alt={title} />
+            </div>
+          )}
+          
+          <div class="post__info">
+            {tags && tags.length > 0 && (
+              <div class="post__tags">
+                {tags.map((tag: string) => (
+                  <span class="post__tag">{tag}</span>
+                ))}
+              </div>
+            )}
+            
+            <h1 class="post__title">{title}</h1>
+            
+            <div class="post__meta">
+              <a href="/about/" class="post__author-image">
+                <img src={author.avatar} alt={author.name} />
+              </a>
+              <div class="post__meta-text">
+                <a href="/about/" class="post__author">{author.name}</a>
+                <div class="post__date">
+                  <FormattedDate date={pubDate} />
+                  {readingTime && <span> · {readingTime}</span>}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="post__content">
+        <slot />
+        
+        <SocialShare url={currentUrl} title={title} />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

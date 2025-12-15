@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const hero = {
+  title: "About Me",
+  description: "I am a software professional with over 25 years of experience in cloud computing, application architecture, and community building. I have a strong business and technology background, and I have been working on the Salesforce platform since 2007. I am a certified Salesforce architect, administrator, and developer as well as certified MuleSoft developer and Hyperautomation Specialist. I was one of the first 8 Salesforce MVPs in 2010 and every year until I joined Salesforce in 2015. I'm currently the Product Manager for Agentforce Vibes.",
+  image: '/images/original-trailhead-team.jpg'
+};
+---
+
+<BaseLayout 
+  title="About Jeff Douglas | Salesforce Product Manager & Developer" 
+  description="Learn about Jeff Douglas, a software professional with 25+ years in cloud computing and Salesforce development. Former Trailhead team member, Force.com MVP, and current Product Manager for Agentforce Vibes."
+  image="/images/original-trailhead-team.jpg"
+>
+  <Hero 
+    title={hero.title}
+    description={hero.description}
+    image={hero.image}
+  />
+  
+  <section class="page">
+    <div class="container">
+      <div class="page__content">
+        <p>I've been married for 25+ years and we have four biological kids and three adopted. We had 95+ foster children over 15 years. Raising kids was sooo much fun the first time we thought we'd do it again with other people's offspring. In my spare time I like to take large pieces of wood, cut them into smaller pieces of wood and then glue them back together into things that people can use.</p>
+        
+        <p>I've been writing software since high school. I possess a strong business and technology background with 25+ years of experience with cloud computing, application development and community building. I've been working on the Salesforce platform since 2007. I was one of the first <a href="http://developer.force.com/mvp_profile_jeff">Force.com MVPs</a> (inaugural class of 10 developers in 2010) and the co-author of two books, the Salesforce Handbook and Beginning Google App Engine for Java.</p>
+        
+        <p>In 2015 I joined Salesforce to kick off this new project called <a href="http://trailhead.salesforce.com">Trailhead</a> as a Principal Member of the Technical Staff (PMTS). As one of the first three full-time resources on Trailhead, I was responsible for developing and managing developer focused content on Trailhead, building platform tools and applications, speaking at events and interacting with the Salesforce developer community.</p>
+        
+        <ul>
+          <li>Led a team of developers to write, test, debug and deploy "hands on challenge" assessment code for all Trailhead badges.</li>
+          <li>Part of the team tasked to write the first four Trailhead Superbadges including content, logic, specifications and hands on challenge assessment code for Apex Integration Specialist, Security Specialist, Reports & Dashboards Specialist and Lightning Experience Specialist superbadges.</li>
+          <li>Developed, wrote content and coded hands on challenges for Build a Battle Station project, Apex Integration Services module and Asynchronous Apex module.</li>
+          <li>Architected and built the Trailhead Release App, a managed package for the Engineering Salesforce org to manage Trailhead Badges, Trails, release planning, bugs and testing.</li>
+          <li>Architected, built and deployed Trailboss, an internal application to maintain multiple choice quizzes and write/test hands on challenge code for Trailhead badges including integration with multiple Salesforce orgs and Trailhead service.</li>
+          <li>Part of "Team Sriracha" that develops and maintains assessment based services including the Assessments Engine, Assessments API and Trailboss.</li>
+          <li>Worked daily on numerous backend and frontend services of the Trailhead platform.</li>
+          <li>Architected and built Trailhead Trail Tracker, a managed package allowing companies to guide their employees through their Salesforce learning adventure on Trailhead. Integration with the Trailhead API allows companies to assign, track and report on earned and assigned badges.</li>
+          <li>Part of the initial Work.com team providing integrations for Trailhead via a series of Lightning Web Components.</li>
+        </ul>
+        
+        <p>After 7 years on Team Trailhead, I moved over to the <a href="https://www.mulesoft.com">MuleSoft</a> side of the house in early 2022 to focus on APIs and Salesforce integration.</p>
+        
+        <p>In 2015 my wife, son and myself founded a 200 seat restaurant and brewery producing 500+ BBLs of beer and cider annually. We owned and operated <a href="https://www.3keysbrewing.com">3 Keys Brewing & Eatery</a> for 4 years before selling it right before the pandemic hit.</p>
+        
+        <p>For over 6 years I was a Senior Technical Consultant at <a href="http://www.appirio.com">Appirio</a> & Developer Evangelist Architect at <a href="http://www.topcoder.com">topcoder</a> specializing in cloud, APIs & mobile apps. I worked on every type of Salesforce project available including Sales Cloud, Service Cloud, Custom Cloud and Chatter. I'm a certified Service Cloud consultant, administrator and developer. I ran Appirio's Heroku Center of Excellence and worked with the platform every day.</p>
+        
+        <p>From early 2011 till late 2013 I built and ran Appirio's <a href="http://www.slideshare.net/jeffdonthemic/cloudspokes-overview">CloudSpokes crowdsourcing development community</a> along with Dave Messinger. I wrote the entire platform with the help of our developer community plus a lot of great tools including <a href="http://blog.cloudspokes.com/2013/04/automated-cloudspokes-code-testing.html">Thurgood</a>, Madison and many, many more.</p>
+        
+        <p>When Appirio purchased <a href="http://www.topcoder.com">topcoder</a> (our much larger competitor), I moved over to become the Developer Evangelist Architect for the platform. I work with the community members, project teams, participate in our TCO events and run hackathons. I've written a number of tools and microservices to support and promote our evangelism efforts:</p>
+        
+        <ul>
+          <li>Our <a href="http://hackathons.topcoder.com/">Hackathon platform</a> for running our TopCoder Open regional events. There's registration, team management, submission management and judging all tied into the topcoder auth service.</li>
+          <li>The <a href="http://tc-leaderboard.herokuapp.com/">leaderboard service</a> and <a href="https://github.com/cloudspokes/tc-leaderboard">API</a> that is used by multiple applications on the platform.</li>
+          <li>A <a href="http://tc-search.herokuapp.com/">challenge search service</a> and API with Elasticsearch that supports many applications.</li>
+          <li>For TopCoder Open 14 we wanted to offer a way for developers to receive a free ticket... if they were truly developers. I wrote <a href="https://blog.jeffdouglas.com/2014/11/03/apex-algorithm-challenges-for-force-com/">Code Your Way In</a> so developers could solve algorithm challenges for free entrance.</li>
+        </ul>
+        
+        <h2>Building Developer Communities</h2>
+        
+        <p>I've been extremely passionate (<em>I hate that phrase... but it fits!</em>) about building developer tools and communities for the past 5-10 years. My blog is very popular with developers and it's grown to roughly 2,000 visitors a day. I like providing solutions to developer problems, tutorials on new technologies, code for quick-starts and tools of all sorts! It's great to meet people at conferences and have them tell me that a piece of code, an application or a tool I wrote made their life/work much easier!</p>
+        
+        <p>I'm probably proudest of the work I did (and am still doing) while building the CloudSpokes and topcoder communities. I love interacting with the developers, getting them access to cutting edge technologies, writing blogs that explain some new technology or topic and showcasing their work. There have been a lot of high points so far but here are a few that come to mind:</p>
+        
+        <h3>Summer of Swift</h3>
+        
+        <p>In June 2014 Apple released their new Swift language. Since we always love shiny things at topcoder, we <a href="https://blog.jeffdouglas.com/2014/08/20/topcoder-kicks-off-500k-learn-swift-series/">pushed an effort to get developers up and running with Swift</a> by kicking off a development series with over $500,000 in cash and prizes. I ran the program from the community side which included <a href="http://swift.topcoder.com">developing the Swift site</a>, writing challenges, interacting with members on the discussion boards and social networks, grading challenges and reaching out to guys that were much smarter than me in the Swift community for help and guidance. We had over 3,000 submissions in roughly 6 weeks and it was such a complete success that this template has been used as a model for other topcoder communities. It was so successful that <a href="http://appirio.com/category/business-blog/2015/04/apple-appirio/">it resulted in this relationship with Apple</a>.</p>
+        
+        <h3>Topcoder "Partner" Communities</h3>
+        
+        <p>Companies love topcoder because of the talent we have inside the community. I've run developer communities for <a href="http://idolondemand.topcoder.com/">HP Idol OnDemand</a>, <a href="http://cisco.topcoder.com/">Cisco</a>, and <a href="http://topcoder.mybluemix.net/">IBM Bluemix</a>. I'm responsible for developing the site to attract target members, help them get started with the technologies and actually competing in real world challenges. I'll do this through a series of blog posts, fun challenges, <a href="https://www.topcoder.com/blog/ibm-watson-bluemix-sweepstakes-winners/">sweepstakes challenges</a> and any other way to excite the community. For HP Haven, I wrote a <a href="http://scavengerhunt.topcoder.com/">Scavenger Hunt application</a> that was playable only through cURL! It was quite fun and popular with the community.</p>
+        
+        <h3>Salesforce1 Lightning Components</h3>
+        
+        <p>In late 2014 at Dreamforce, Salesforce.com launched their new Salesforce1 Lightning Components in beta. Before the launch I got early access to the program and worked with <a href="https://www.linkedin.com/in/adamseligman">Salesforce Developer Relations</a> to jointly push the development of these components in the topcoder community. When Lightning was announced at Dreamforce, Salesforce encouraged everyone to participate in our <a href="http://lightning.topcoder.com/">Salesforce Lightning Community</a>. I <a href="https://blog.jeffdouglas.com/2015/03/13/tutorial-building-lightning-components-with-spring-15/">launched the first Lightning tutorial</a> and started running challenges in the community. I rolled out the marketing program in conjunction with Salesforce, developed the challenges and graded them. <a href="https://www.topcoder.com/blog/salesforce1-lightning-challenge-showcase/">My resulting Showcase blog</a> had a large number of great apps and components that Salesforce showed off.</p>
+        
+        <h3>Amazon DynamoDB</h3>
+        
+        <p>When DynamoDB was launched in early 2012, I got on the private beta and worked with Amazon to obtain early access for our CloudSpokes developers. I <a href="https://blog.jeffdouglas.com/2012/01/19/amazon-dynamodb-demo/">wrote a quick demo</a> the day after it was launched and proceeded to run some challenges to build some cool applications with it. <a href="https://aws.amazon.com/blogs/aws/cloudspokes-coding-challenge-build-a-dynamodb-demo">I guest-blogged on the AWS site</a> with the results of our challenges!</p>
+        
+        <h2>DevOps</h2>
+        
+        <p>Over the last couple of years I have really been excited about DevOps, even developing a <a href="https://blog.jeffdouglas.com/2013/03/18/setting-up-continuous-integration-for-saleforce-development/">CI model for Salesforce.com projects</a>. While at CloudSpokes I developed <a href="http://blog.cloudspokes.com/2013/04/automated-cloudspokes-code-testing.html">Thurgood</a> for automated build, quality and security analysis of submitted challenge code. The microservice is hooked into various Appirio technologies and the topcoder platform. The <a href="https://github.com/appirio-tech/thurgood/wiki">project wiki</a> has more detailed info.</p>
+        
+        <p>I've been really excited about Docker since I met them at Monktoberfest a couple of years ago. I've written a number of blogs about Docker including <a href="https://blog.jeffdouglas.com/2014/08/07/deploying-go-apps-to-elastic-beanstalk-with-docker/">Deploying Go Apps with Docker to Elastic Beanstalk</a> and <a href="https://blog.jeffdouglas.com/2015/05/07/deploying-apps-to-heroku-with-docker">Deploying Docker to Heroku</a>. I've been evangelizing the technology at Salesforce.com and within the topcoder community. I'm excited to see that a number of customer projects are using docker for submissions! I'm not sure if it's really DevOps per se, but I've been trying to promote AWS Lambda with a number of blog posts including <a href="https://blog.jeffdouglas.com/2015/01/29/aws-lambda-aka-node-js-meets-ifttt-as-a-service/">AWS Lambda aka Node.js meets IFTTT as a service!</a></p>
+        
+        <h2>Force.com Utility Belt</h2>
+        
+        <p><a href="https://blog.jeffdouglas.com/force-com-utility-belt/">The Force.com Utility Belt</a> is a Google Chrome Extension that I wrote to make my life easier. While developing on the Force.com platform I consistently need access to Salesforce documents, message boards, code snippets, etc. and opening PDFs, searching documentation and looking up Visualforce component signatures becomes tedious. The extension evolved out of my necessity to make myself more productive. <strong>It currently has more than 4,500 installs!</strong></p>
+        
+        <h2>Books</h2>
+        
+        <p><strong>The Salesforce Handbook</strong></p>
+        <p>A newcomer's guide to building applications on Salesforce.com and the Force.com Platform. This book is not intended to be a deep-dive on security, programming, reporting, configuration, etc. but more of a high-level overview on salesforce.com, Force.com development, tools, methodology and other resources. You can find out more info at the <a href="http://salesforcehandbook.wordpress.com">book's blog site</a>, <a href="http://salesforcehandbook.wordpress.com/reviews/">read the reviews</a> of the book or <a href="http://www.lulu.com/spotlight/salesforcehandbook">get a copy at Lulu.com</a>.</p>
+        
+        <p><strong>Beginning Java Google App Engine</strong></p>
+        <p>If you are a Java programmer, this book offers you a Java approach to beginning Google App Engine. You will explore the runtime environment, front-end technologies like Google Web Toolkit, Adobe Flex, and the datastore behind App Engine. Available at <a href="http://www.amazon.com/gp/product/143022553X?ie=UTF8&tag=jefdoublo-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=143022553X">Amazon.com</a>.</p>
+        
+        <h2>Salesforce.com Articles</h2>
+        
+        <p>I've written a number of articles for salesforce.com and the <a href="http://developer.force.com">developer.force.com</a> site.</p>
+        <ol>
+          <li><a href="http://wiki.developerforce.com/index.php/Introduction_to_the_Force.com_Web_Services_Connector">Introduction to the Force.com Web Services Connector</a></li>
+          <li><a href="http://wiki.developerforce.com/index.php/Using_OAuth_to_Authorize_External_Applications">Using OAuth to Authorize External Applications</a></li>
+          <li><a href="http://wiki.developerforce.com/index.php/Single_Sign-On_with_SAML_on_Force.com">Single Sign-On with SAML on Force.com</a></li>
+          <li><a href="http://wiki.developerforce.com/index.php/Loading_Large_Data_Sets_with_the_Force.com_Bulk_API">Loading Large Data Sets with the Force.com Bulk API</a></li>
+          <li><a href="http://wiki.developerforce.com/index.php/Forcedotcomworkbook">Chatter Workbook Tutorial #3: Accessing Chatter From a Java Client</a></li>
+        </ol>
+        
+        <h2>Open Source Projects</h2>
+        
+        <p>I'm involved in various roles with the following projects:</p>
+        <ol>
+          <li><a href="https://github.com/jeffdonthemic/nforce-tooling">nforce-tooling</a> - A Force.com Tooling API plugin for nforce.</li>
+          <li><a href="https://github.com/kevinohara80/nforce">nforce</a> - A node.js salesforce REST API wrapper for force.com, database.com, and salesforce.com</li>
+          <li><a href="https://github.com/jeffdonthemic/forcifier">forcifier</a> - Ruby gem that provides utility functions for dealing with Force.com fields to make them pretty and easier to work with.</li>
+          <li><a href="https://github.com/jeffdonthemic/forcifier-node">forcifier-node</a> - Node.js package that provides utility functions for dealing with Force.com fields to make them pretty and easier to work with.</li>
+          <li><a href="http://code.google.com/p/sfdc-wsc/">sfdc-wsc</a> - The Force.com Web Service Connector (WSC) is a high performing web service client stack implemented using a streaming parser.</li>
+          <li><a href="http://code.google.com/p/sfdc-oauth-demo/">sfdc-oauth-demo</a> - A demo Force.com web application using OAuth to authorize access to Salesforce to view account and contact records. Written on Google App Engine in Java.</li>
+          <li><a href="http://code.google.com/p/sfdc-bulkapi-demo/">sfdc-bulkapi-demo</a> - A demo Force.com Java command line app that uses the Bulk API to load data from a CSV file or JDBC database.</li>
+          <li><a href="http://code.google.com/p/twilioforce/">twilioforce</a> - Force.com library for Twilio</li>
+          <li><a href="http://code.google.com/p/gae-timecard/">gae-timecard</a> - The source code for the timeentry application from my <a href="http://www.amazon.com/gp/product/143022553X?ie=UTF8&tag=jefdoublo-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=143022553X">Beginning Java Google App Engine book</a>.</li>
+          <li><a href="http://code.google.com/p/sfdc-wsc/source/browse/#svn/branches/gae/samples/telesales">telesales</a> - A demo application for Google App Engine using the Force.com WSC.</li>
+        </ol>
+        
+        <h2>Presentations</h2>
+        
+        <ul>
+          <li><a href="http://www.slideshare.net/jeffdonthemic/sd-dug-salesforce-lightning-week">Salesforce Lightning Week</a> (San Diego Developer User Group 2015)</li>
+          <li><a href="http://www.slideshare.net/jeffdonthemic/build-consumerfacing-apps-with-heroku-connect">Build Consumer-Facing Apps with Heroku Connect</a> (Dreamforce 2014)</li>
+          <li><a href="https://www.youtube.com/watch?v=fqSKvwR8zcc">Building Command-line Tools with the Tooling API</a> & <a href="http://www.slideshare.net/jeffdonthemic/building-commandline-tools-with-the-tooling-api">deck</a> (Dreamforce 2014)</li>
+          <li><a href="http://www.slideshare.net/jeffdonthemic/force-api">Build your API with Force.com and Heroku</a> (Dreamforce 2013)</li>
+          <li><a href="http://www.slideshare.net/jeffdonthemic/gluecon-2012-dynamodb">Wrestle your NoSQL Data with DynamoDB</a> (Gluecon 2012)</li>
+          <li><a href="http://www.youtube.com/watch?v=XHlD7Rqz7K4">Creating HTML5 Applications with jQuery Mobile, Ruby and Database.com</a> (Dreamforce 2012)</li>
+          <li><a href="http://www.youtube.com/watch?v=7k9uwTj_svI&hd=1">Connect Your Clouds with Force.com</a> (Dreamforce 2011)</li>
+          <li><a href="http://www.youtube.com/watch?v=tRKaha5oCWU&hd=1">Azure vs. Database.com: Lessons Learned from Replatforming CloudSpokes.com</a> (Dreamforce 2011)</li>
+          <li><a href="http://www.youtube.com/watch?v=1fd5UUmCHNo&hd=1">Leveraging Public Social Networks</a> (Dreamforce 2010)</li>
+          <li><a href="http://www.youtube.com/watch?v=DB3aBx0W9Cs&hd=1">Architecting in the Cloud: Choosing the Right Technologies for Your Solution</a> (Dreamforce 2009)</li>
+        </ul>
+        
+        <h2>YouTube Videos</h2>
+        
+        <p>I have a ton of videos on my <a href="https://www.youtube.com/user/jeffdonthemic/videos">Youtube channel</a> but here are a few of the older ones:</p>
+        
+        <ol>
+          <li><a href="http://www.youtube.com/watch?v=sXJxG6zWSZA&hd=1">Using the Salesforce.com OAuth Playground</a></li>
+          <li><a href="http://www.youtube.com/watch?v=2KggRjco6bs&hd=1">Salesforce Chatter for Android</a></li>
+          <li><a href="http://www.youtube.com/watch?v=x0ogfMjwUa0&hd=1">Authorizing Force.com Web Applications with OAuth</a></li>
+          <li><a href="http://www.youtube.com/watch?v=FqeGxAuFqSM&hd=1">Salesforce Chatter for Twitter demo</a></li>
+          <li><a href="http://www.youtube.com/watch?v=fLhEY6IrTjc&hd=1">Force.com Demo with Twilio</a></li>
+          <li><a href="http://www.youtube.com/watch?v=6TBZBVGrQX4&hd=1">Salesforce.com Robot for Google Wave</a></li>
+          <li><a href="http://www.youtube.com/watch?v=uXTFe_7g3i8&hd=1">Offline Adobe Air Application for Salesforce.com with the Stratus Framework</a></li>
+          <li><a href="http://www.youtube.com/watch?v=2xYM0ZtaTBM&hd=1">Talend Open Studio</a></li>
+          <li><a href="http://www.youtube.com/watch?v=4BuvOeqEgRo&hd=1">PeopleImport from CRMFusion</a></li>
+          <li><a href="http://www.youtube.com/watch?v=x_TkfY_kcX8&hd=1">DemandTools from CRMFusion</a></li>
+          <li><a href="http://www.youtube.com/watch?v=1thHYj1Ls8k&hd=1">Informatica Data Loader</a></li>
+        </ol>
+        
+        <h2>Awards</h2>
+        
+        <p><img src="/images/photo.JPG" alt="Developer Hero Award" /></p>
+        
+        <p><a href="https://blog.jeffdouglas.com/2010/12/29/thanks-for-the-salesforce-developer-hero-award/">2010 Salesforce.com "Developer Hero" Award</a></p>
+        
+        <p>2nd Place in the <a href="http://blog.sforce.com/sforce/2010/06/chatter-developer-challenge-winners-congratulations.html">Chatter Developer Challenge</a> with <a href="http://www.youtube.com/watch?v=2KggRjco6bs">Salesforce Chatter for Android</a>.</p>
+        
+        <p>We received the following awards when I was the CIO at <a href="http://www.medisend.org">Medisend International</a>:</p>
+        
+        <p><a href="http://www.cio.com/cio100/detail/1848">2008 CIO 100 Award by CIO Magazine</a> for Creating Business Value With Technology Innovation for establishing an online global education center to provide technical training and education to students from developing countries on the maintenance and repair of biomedical equipment and healthcare management.</p>
+        
+        <p><a href="http://www.cio.com/cio100/detail/1718">2007 CIO 100 Award by CIO Magazine</a> for Exemplifying Operational and Strategic Excellence in Information Technology for processes and applications architected, designed and built.</p>
+        
+        <p><a href="http://www.cio.com/cio-100/2006/winners/winner_331">2006 CIO 100 Award Winner</a> for Innovation by CIO Magazine for the processes, technology and supply chain applications architected and built.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

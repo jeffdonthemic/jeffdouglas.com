@@ -1,0 +1,63 @@
+---
+interface Props {
+  currentPage: number;
+  totalPages: number;
+  baseUrl?: string;
+}
+
+const { currentPage, totalPages, baseUrl = '' } = Astro.props;
+
+const prevUrl = currentPage > 1 
+  ? (currentPage === 2 ? (baseUrl || '/') : `${baseUrl}/page/${currentPage - 1}`)
+  : null;
+  
+const nextUrl = currentPage < totalPages 
+  ? `${baseUrl}/page/${currentPage + 1}`
+  : null;
+---
+
+{totalPages > 1 && (
+  <div class="pagination">
+    <div class="container">
+      <nav class="pagination__inner">
+        <div class="pagination__list">
+          {prevUrl ? (
+            <a href={prevUrl} class="pagination__prev pagination__item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+              Prev
+            </a>
+          ) : (
+            <span class="pagination__prev pagination__item disabled">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+              Prev
+            </span>
+          )}
+          
+          <div class="pagination__count pagination__item">
+            Page {currentPage} of {totalPages}
+          </div>
+          
+          {nextUrl ? (
+            <a href={nextUrl} class="pagination__next pagination__item">
+              Next
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+          ) : (
+            <span class="pagination__next pagination__item disabled">
+              Next
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </span>
+          )}
+        </div>
+      </nav>
+    </div>
+  </div>
+)}
