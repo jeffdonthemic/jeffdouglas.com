@@ -4,7 +4,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://jeffdonthemic.github.io',
-  base: '/jeffdouglas.com',
+  site: 'https://www.jeffdouglas.com',
   integrations: [mdx(), sitemap()],
 });
