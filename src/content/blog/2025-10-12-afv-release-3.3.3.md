@@ -9,6 +9,17 @@ slug: "2025/12/10/avf-release-3.3.0"
 
 Agentforce Vibes 3.3.0 introduces Deep Planning and Focus Chain—two powerful new tools designed to bring architectural foresight and structured task tracking to your development workflow. Along with enhancements to MCP integration, this release focuses on helping developers manage complex changes with detailed blueprints, dynamic to-do lists, and smarter progress visibility.
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 2rem 0;">
+  <iframe 
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+    src="https://www.youtube.com/embed/m2MqtzgnnPk" 
+    title="Agentforce Vibes 3.3.0 Release" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+</div>
+
 ### 🧠 Deep Planning
 
 The new `/deep-planning` command transforms Agentforce into a thoughtful architect that deeply plans before it builds. When you run it, Agentforce investigates your codebase, asks clarifying questions, and generates a detailed implementation plan, complete with file paths, class structures, and step-by-step execution order.
