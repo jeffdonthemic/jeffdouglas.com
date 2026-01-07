@@ -2,7 +2,9 @@
 title: 'Agentforce Vibes 3.3.0 is here!'
 description: 'This release introduces two major new features — Deep Planning and Focus Chain — designed to make Agentforce more capable, more organized, and more aligned with how developers work.'
 pubDate: 'Dec 10 2025'
-heroImage: 'images/avf-release-3.3.0.png'
+heroImage: '/images/avf-release-3.3.0.png'
+tags: ["agentforce-vibes", "ai"]
+slug: "2025/12/10/avf-release-3.3.0"
 ---
 
 Agentforce Vibes 3.3.0 introduces Deep Planning and Focus Chain—two powerful new tools designed to bring architectural foresight and structured task tracking to your development workflow. Along with enhancements to MCP integration, this release focuses on helping developers manage complex changes with detailed blueprints, dynamic to-do lists, and smarter progress visibility.
